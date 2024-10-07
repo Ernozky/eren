@@ -1,0 +1,12 @@
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f'Merhaba! Ben {bot.user}, bir Discord sohbet botuyum!')
+
+@bot.command()
+async def heh(ctx, count_heh = 5):
+    await ctx.send("he" * count_heh)
+
+@bot.command()
+async def parola_ver(ctx, parola_uzunlugu=8):
+    parola = parola_olustur(parola_uzunlugu)
+    await ctx.send("Sizin için oluşturulan parola: " + parola)
